@@ -2,7 +2,8 @@ import os
 import tweepy
 from secrets import *
 from time import gmtime, strftime
-from random import randint
+from random import choice
+from grose import master_list
 
 
 # ====== Individual bot configuration ==========================
@@ -14,8 +15,7 @@ logfile_name = bot_username + ".log"
 
 def create_tweet():
     """Create the text of the tweet you want to send."""
-    text = "The merit of Captain Grose's Dictionary of the Vulgar Tongue has been long and universally acknowledged. But its circulation was confined almost exclusively to the lower orders of society: he was not aware, at the time of its compilation, that our young men of fashion would at no very distant period be as distinguished for the vulgarity of their jargon as the inhabitants of Newgate; and he therefore conceived it superfluous to incorporate with his work the few examples of fashionable slang that might occur to his observation."
-    text = "In honor of the venerable Francis Grose."
+    text = choice(master_list)
     return text
 
 
